@@ -47,31 +47,12 @@
     hyphens: auto;
     font-weight: inherit;
     font-size: inherit;
+    text-align: center;
   }
   ::selection {
     background-color: var(--negro);
     color: var(--blanco);
   }
   
-  form , input, textarea, select , button{
-      font-family: inherit;
-      font-size: inherit;
-      hyphens: auto;
-      background-color: transparent;
-      // appearance: none;
-      display: block;
-    }
   
-  body {
-    font-family: var(--tipo-principal);
-    font-size: 100%;
-    line-height: 1.4em;
-    min-height: 100vh;
-    background-color: var(--blanco);
-    color:var(--negro);
-    hyphens: auto;
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    @include flex( row , nowrap , center , center );
-  }
+ 
