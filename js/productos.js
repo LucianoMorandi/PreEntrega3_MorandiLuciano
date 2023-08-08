@@ -66,24 +66,3 @@ let productos = [
         cantidad: 0
     }
 ]
-
-let cardProducts = document.getElementById("contenedor-productos");
-let carrito = [];
-
-for (const producto of productos) {
-    let { nombreProducto, precio, imagen, clase } = producto
-
-    let cardHtml =
-        `<div class="producto" class=${clase}>
-            <figure>
-                <img src=${imagen} alt="producto">
-            </figure>
-            <div class="info-producto">
-                <h2>${nombreProducto}</h2>
-                <p class="precio">$${precio}</p>
-                <button type="button" class="btn">Añadir al carrito</button>
-            </div>
-        </div>`
-    ;
-    cardProducts.innerHTML += cardHtml;
-}

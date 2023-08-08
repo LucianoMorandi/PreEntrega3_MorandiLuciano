@@ -1,0 +1,21 @@
+#carrito-contenido {
+  border: 1px solid #d04848;
+  padding: 20px;
+  margin: 10 auto;
+  max-width: 600px;
+}
+#carrito-contenido p {
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+#total-carrito {
+  border: 1px solid #d04848;
+  padding: 20px;
+  margin: 10 auto;
+  max-width: 600px;
+  font-size: 36px;
+}
+
+/*# sourceMappingURL=carrito.css.map */

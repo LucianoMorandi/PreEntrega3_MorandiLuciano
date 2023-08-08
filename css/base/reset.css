@@ -57,9 +57,4 @@ h1, h2, h3, h4, h5, h6, strong {
   text-align: center;
 }
 
-::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-
 /*# sourceMappingURL=reset.css.map */
