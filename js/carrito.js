@@ -1,8 +1,12 @@
 let cardProducts = document.getElementById("contenedor-productos");
 let carrito = [];
 
-// CREAR TARJETAS DE PRODUCTOS
-for (const producto of productos) {
+const getProducts = async () => {
+  const response = await fetch("/data.json");
+  const data = await response.json();
+
+  // CREAR TARJETAS DE PRODUCTOS
+  for (const producto of data) {
     let { nombreProducto, precio, imagen, clase, id } = producto
 
     let cardHtml =
@@ -18,12 +22,11 @@ for (const producto of productos) {
         </div>`
     ;
     cardProducts.innerHTML += cardHtml;
-
 }
 
-// // AGREGAR PRODUCTOS AL CARRITO
-function agregarAlCarrito(id) {
-    const producto = productos.find((p) => p.id === id);
+  // // AGREGAR PRODUCTOS AL CARRITO
+  function agregarAlCarrito(id) {
+    const producto = data.find((p) => p.id === id);
     if (producto) {
       carrito.push(producto);
       console.log(`${producto.nombreProducto} agregado al carrito.`);
@@ -52,7 +55,7 @@ function agregarAlCarrito(id) {
     console.log(`Total de la compra: $${total}`);
   }
   
-// BOTON AGREGAR CARRITO
+  // BOTON AGREGAR CARRITO
   const btnCarrito = document.getElementsByClassName("btn-carrito");
   for (let i = 0; i < btnCarrito.length; i++) {
     btnCarrito[i].addEventListener('click', function() {
@@ -60,5 +63,11 @@ function agregarAlCarrito(id) {
       agregarAlCarrito(idProducto);
     });
   }
+}
+
+getProducts();
+
+
+
   
   
